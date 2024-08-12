@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      //simple calculator
+      function operations(n1,n2,op){
+     
+      let result;
+      if (op == "+") {
+        result = n1 + n2;
+      } else if (op == "-") {
+        result = n1 - n2;
+        if (n2 > n1 && op == "-") {
+          result = n2 - n1;
+        }
+      } else if (op == "*") {
+        result = n1 * n2;
+      } else if (op == "/") {
+        result = n1 / n2;
+      } else if (op == "%") {
+        result = n1 % n2;
+      } else {
+        alert("invalid operator");
+        result = "undefined";
+      }
+      alert("The result is:" + result);
+    }
+      let n1= +prompt("enter the first value");
+      let n2 = +prompt("enter the second value");
+      let op= prompt("enter the operator");
+      operations(n1,n2,op)
+      
+    
+
+    </script>
+  </body>
+</html>
