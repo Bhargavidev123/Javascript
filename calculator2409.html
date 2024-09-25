@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border-radius:20px;
+            height: 100px;
+            width:100px;
+            background-color: orange;
+            
+            
+
+        }
+        .num{
+            background-color: aliceblue;
+        }
+        #div2{
+            display:grid;
+            grid-template-columns:100px 100px 100px 100px ;
+            grid-template-rows: 100px 100px 100px 100px 100px;
+            column-gap:20px;
+            row-gap: 10px;
+            padding: 20px;
+            
+        }
+        #div1{
+             height: 700px;
+             width: 510px;
+        }
+    </style>
+</head>
+<body>
+     <div id="div1"><br>
+        <input id="display">
+        
+        <!-- <button onclick="demo()">result</button> -->
+     <div id="div2">
+
+        <button onclick="clearinput()">AC</button>
+        <button onclick="addValue('/')">/</button>
+        <button onclick="back('X')">X</button>
+        <button onclick="addValue('.')">.</button>
+        <button onclick="addValue('+')">+</button>
+        <button onclick="addValue('7')" class="num">7</button>
+        <button onclick="addValue('8')" class="num">8</button>
+        <button onclick="addValue('9')" class="num">9</button>
+        <button onclick="addValue('-')">-</button>
+        <button onclick="addValue('4')"class="num">4</button>
+        <button onclick="addValue('5')"class="num">5</button>
+        <button onclick="addValue('6')"class="num">6</button>
+        <button onclick="addValue('*')">x</button>
+        <button onclick="addValue('1')"class="num">1</button>
+        <button onclick="addValue('2')"class="num">2</button>
+        <button onclick="addValue('3')"class="num">3</button>
+        <button onclick="addValue('%')">%</button>
+        <button onclick="addValue('00')"class="num">00</button>
+        <button onclick="addValue('0')"class="num">0</button>
+        <button onclick="result('=')">=</button>
+
+
+        <p id="p2"></p>
+        
+    
+        
+        
+
+     </div>
+    
+     </div>
+
+
+
+
+     <script>
+        let div=document.getElementById("div1");
+        div.style.border="3px solid black";
+        
+        div.style.backgroundColor="black";
+        let input=document.getElementById("display");
+        input.style.height="100px";
+        input.style.width="490px";
+        let btn=document.getElementsByTagName("button");
+        
+
+        let p=document.getElementById("p2")
+        let exp=document.getElementById("display")
+      
+
+        function addValue(x){
+            exp.value+=x
+        }
+        function result(){
+            let cal=eval(exp.value)
+            exp.value=cal;
+
+        }
+        function clearinput(){
+            exp.value=""
+        }
+        function back(){
+            exp.value=exp.value.slice(0,-1)
+        }
+
+        
+
+        
+
+     </script>
+</body>
+</html>
