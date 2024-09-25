@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .md{
+        border: 5px solid black;
+        border-radius: 15px;
+        height: 55vh;
+        width: 20vw;
+        background-color: blueviolet;
+    }
+    .h{
+        border: 2px solid rgb(35, 126, 195);
+        color: rgb(35, 126, 195);
+        background-color: azure;
+        margin-top: 10px;
+        height:20px;
+        width:120px;
+        margin-left:80px;
+        border-radius: 25px;
+        padding:5px 5px 5px 25px;   
+    }
+    .c1{
+        border: 2px solid rgb(1, 2, 10);
+        border-radius: 60px;
+        height: 150px;
+        width:120px;
+        margin-left:90px;
+    }
+    img{
+        border-radius: 60px;
+        height: 150px;
+        width: 120px;
+    }
+    .p1{
+        margin-left: 83px;
+    }
+    .p2{
+        margin-left: 83px;
+    }
+    .p3{
+        margin-left: 83px;
+    }
+    .p4,.p5,.p6{
+        margin-left: 83px;
+    }
+    .md2{
+        border: 2px solid rgb(35, 126,195);
+        height: 185px;
+        border-radius: 60px;
+        background-color: aliceblue;
+    }
+    .div1{
+        border:2px solid black;
+        height:50vh;
+        width:50vw;
+        text-align: center;
+    }
+</style>
+<body>
+   <div class="div1">
+    <form>
+        <h1>FORM</h1>
+        <label for="first">Firstname:</label>
+        <input type="text"id="id1"placeholder="enter your name"><br><br>
+
+        <label for="second">Lastname:</label>
+        <input type="text"id="id2"placeholder="enter your last name"><br><br>
+        <label for="third">Branch</label>
+        <input type="text"id="id3"placeholder="enter your branch"><br><br>
+        <label for="fourth">Blood Group</label>
+        <input type="text"id="id4"placeholder=" enter your Blood Group"><br><br>
+        <label for="fifth">Mobile Number</label>
+        <input type="number"id="id5"placeholder=" enter your Mobile Number"><br><br>
+        <label for="sixth">Date of Birth</label>
+        <input type="date"id="id6"name="birthday"><br><br>
+        <input id="image" type="file">
+        <input type="submit">
+    </form>
+   </div><br><br>
+    <!-- <p></p>
+    <p></p> -->
+
+
+    <div class="md">
+        <h5 class="h" >1OOOO CODERS</h5>
+        <div class="c1"><img id="img"></div>
+        <div class="md2">
+        
+         <p class="p1" ></p>
+         <p class="p2"  ></p>
+         <p class="p3" ></p>
+         <p class="p4" ></p>
+         <p class="p5" ></p>
+         <p class="p6"></p>
+         <!-- <p class="p7"></p> -->
+     </div>
+    <script>
+       let form=document.getElementsByTagName("form");
+       form[0].addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let id1=document.getElementById("id1");
+        let id2=document.getElementById("id2");
+        let id3=document.getElementById("id3");
+        let id4=document.getElementById("id4");
+        let id5=document.getElementById("id5");
+        let id6=document.getElementById("id6");
+        let id7=document.getElementById("id7");
+
+        let result=id1.value+" "+id2.value;
+        // console.log(id1.value);
+        let p=document.getElementsByTagName("p");
+        p[0].innerHTML=`Name:${result}`;
+        p[1].innerHTML=`Branch:${id3.value}`;
+        p[2].innerHTML=`Blood Group:${id4.value}`;
+        p[3].innerHTML=`Mobile Number:${id5.value}`;
+        p[4].innerHTML=`DateofBirth:${id6.value}`;
+
+        imginput=document.getElementById("image");
+        img=document.getElementById("img")
+        img.src=URL.createObjectURL(imginput.files[0]);
+       })
+
+    </script>
+   </div> 
+</body>
+</html>

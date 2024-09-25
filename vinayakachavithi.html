@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinayaka Chathurthi</title>
+    <style>
+        .div1{
+            border:2px solid black;
+            height:80vh;
+            width:50vw;
+            text-align: center;
+            background-color: rgb(from rgb(255, 192, 231) r g b);
+        }
+        img{
+            height:40vh;
+            width:20vw;
+            margin-top:60px;
+            
+            
+        }
+        h1{
+            
+           color: rgb(116, 43, 226); 
+           font-size: 20px;
+        }
+        h3{
+            color:rgb(229, 21, 56);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="div1">d
+    <img id="myimg">
+    <h1></h1>
+    <h3></h3>
+   </div>
+    <script>
+    let div=document.createElement('div')
+    div.className='div1';
+    img=document.getElementById("myimg");
+    img.src="vinayaka.jpg";
+    h1=document.getElementsByTagName("h1");
+    h1[0].innerHTML="HAPPY GANESH CHATURTHI";
+    h3=document.getElementsByTagName("h3");
+    h3[0].innerHTML="Wishing you and your family a Very Happy and Prosperous Ganesh Chaturthi";
+</script>
+</body>
+</html>
